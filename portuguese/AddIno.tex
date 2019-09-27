@@ -1,0 +1,50 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[a4paper, total={180mm, 272mm}]{geometry}
+
+\usepackage{fontspec}
+\setmainfont[Path=fonts/, Extension=.ttf]{ipaexm}
+
+\setlength\parindent{3.5em}
+\setlength\parskip{0em}
+\renewcommand{\baselinestretch}{1.247}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\Large
+\noindent \\
+Add Ino\medskip
+\par
+\normalsize
+Pode ser encontrado na janela de FX Schematic em:\par
+Add Fx->Layer\_Blending\_Ino->Add\_Ino\par
+Adição simples de imagens.\par
+Imagens ficarão mais claras usando adição.\par
+Formula = Imagem de Backgorund + Imagem de Foreground.\\
+\\
+-{-}- \ Entradas \ -{-}-\par
+Ambas as conexões são combinadas no processo.\par
+Quando o interruptor da operação está desligado, o efeito mostra a imagem de Backgorund.\par
+Ele faz o mesmo se existir apenas uma conexão.\\
+Fore (Imagem de Foregrond)\par
+Conecte a imagem que irá sobrepor a outra em cima.\\
+Back (Imagem de Backgorund)\par
+Conecte a imagem que ficará por baixo.\\
+\\
+-{-}- \ Configurações \ -{-}-\\
+Opacidade (Opacity)\par
+Especifica a opacidade da imagem que está sobrepondo.\par
+Quando a opacidade está em 0 a imagem "Fore" será transparente.\par
+O valor padrão é \textquotedbl 1.0\textquotedbl \ para a opacdade da imagem de Foreground e a soma das imagens é sintetizada como opaca.\par
+Especifique um valor de 0 à 1,0.\par
+É possível especificar valores maiores também (de 1 à 10.0).\\
+\\
+Máscara de Corte (Clipping Mask)\par
+Quando a caixa de seleção estiver marcada,\par
+Não existirá material nas áreas transparentes da imagem de Backgorund. Essas áreas ficarão vazias na imagem sintetizada.\par
+O padrão para a máscará de corte é estar ligada.
+
+O código para esse efeito pode ser encontrado em: opentoonz/toonz/sources/stdfx/ino\_blend\_add.cpp
+
+\end{document}
